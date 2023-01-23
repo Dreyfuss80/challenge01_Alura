@@ -1,3 +1,4 @@
+
 var btnEncriptar = document.querySelector("#btn-encriptar");
 var btnDesencriptar = document.querySelector("#btn-desencriptar");
 var btnCopiar = document.querySelector("#btn-copiar");
@@ -63,14 +64,9 @@ function desencriptar(){
 function copiando(){
     
     let copiar_texto = document.getElementById("textarea-derecho").innerHTML;
+    
+    navigator.clipboard.writeText(copiar_texto);
+    alert("Se ha copiado el texto!!!!!");
     document.getElementById("textarea-derecho").innerHTML = "";
-
-    if(copiar_texto != ""){
-        navigator.clipboard.writeText(copiar_texto);
-    alert("Se ha copiado el texto!!!!!")
-    }
-    else{
-        alert("Se encuentra vacio, nada que copiar")
-    }
     
 }
