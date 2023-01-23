@@ -36,7 +36,7 @@ function encriptar(){
 
 
 function desencriptar(){
-    var textodesenc = document.getElementById("textarea-izq").value.toLowerCase();
+    var texto = document.getElementById("textarea-izq").value.toLowerCase();
 
     // i --> Para letras mayusculas y minusculas
     // g --> Para que tome en cuenta toda la linea de la oracion
@@ -48,7 +48,6 @@ function desencriptar(){
     var textocifrado = textocifrado.replace(/ufat/img,"u");
 
     document.getElementById("textarea-derecho").innerHTML = textocifrado;
-    // console.log(textocifrado);
 
     document.getElementById("muneco").style.display = "none";
     document.getElementById("titulo-derecho").style.display = "none";
@@ -60,7 +59,7 @@ function desencriptar(){
 
 function copiando(){
 
-    let copiar_texto = document.getElementById("textarea-derecho").value;
+    let copiar_texto = document.getElementById("textarea-derecho").innerHTML;
     console.log(copiar_texto);
 
     navigator.clipboard.writeText(copiar_texto);
