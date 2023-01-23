@@ -36,9 +36,8 @@ function encriptar(){
 
 
 function desencriptar(){
-    var texto = document.getElementById("textarea-izq").value.toLowerCase();
+    var textodesenc = document.getElementById("textarea-izq").value.toLowerCase();
 
-    if (texto != ""){
     // i --> Para letras mayusculas y minusculas
     // g --> Para que tome en cuenta toda la linea de la oracion
     // m --> Para que tome en cuenta si hay multilineas
@@ -49,25 +48,24 @@ function desencriptar(){
     var textocifrado = textocifrado.replace(/ufat/img,"u");
 
     document.getElementById("textarea-derecho").innerHTML = textocifrado;
-    console.log(textocifrado);
+    // console.log(textocifrado);
 
     document.getElementById("muneco").style.display = "none";
     document.getElementById("titulo-derecho").style.display = "none";
     document.getElementById("parrafo-derecho").style.display = "none";
 
-    }
-    else (
-        alert("Por favor introduzca un texto valido en el area del input")
-    )
+  
 }
 
 
 function copiando(){
 
     let copiar_texto = document.getElementById("textarea-derecho").value;
+    console.log(copiar_texto);
 
     navigator.clipboard.writeText(copiar_texto);
     alert("Se ha copiado el texto!!!!!");
     document.getElementById("textarea-derecho").value = "";
+
 
 }
