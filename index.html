@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Encriptador Alura</title>
+</head>
+<body>
+
+    <header>
+        <img src="img/letra_a.png" alt="Logo de Alura" class="logo">
+        <h1 class="header-titulo">Bienvenidos al Encriptador</h1>
+    </header>
+    
+
+    <main>
+        <!-- Aqui comenzamos el contenedor de los dos lados del main -->
+        <div class="container-main">
+
+            <!-- Aqui comenzamos el contenedor izq -->
+            <div class="contenedor-izq">
+                <textarea spellcheck="false" class="textarea-izq" name="" id="textarea-izq" cols="60" rows="30" placeholder="Ingrese su texto aquí"></textarea>
+                <p class="parrafo-aclaratorio">❗ <i>Letras minúsculas y sin acentos</i> </p>
+                
+                <div class="contenedor-botones">
+                    <input type="button" value="Encriptar" class="botones" id="btn-encriptar">
+                    <input type="button" value="Desencriptar" class="botones" id="btn-desencriptar">
+                </div>
+            </div>
+
+
+            <!-- Aqui comenzamos el contenedor derecho -->
+            <div class="contenedor-derecho">
+                <div class="caja-derecha">
+                    <textarea cols="60" rows="30" class="textarea-derecho" id="textarea-derecho" readonly></textarea>
+                    <div class="oculto">
+                        <img src="img/asidemunheco.png" alt="Chico buscando diamantes con una lupa" id="muneco" class="muneco">
+                        <h3 class="titulo-derecho" id="titulo-derecho">Ningún mensaje fue encontrado</h3>
+                        <p class="parrafo-derecho" id="parrafo-derecho">Ingresa el texto que desees encriptar o desencriptar.</p>
+                    </div>
+                </div> 
+                
+                <div class="contenedor-copiar">
+                    <input type="button" value="Copiar / Limpiar" class="btn-copiar botones" id="btn-copiar">
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p class="parrafo1-footer">© Realizado por Jorge L. Rdguez.</p>
+        <p class="parrafo2-footer">Challenge ONE Sprint 01: Construye un encriptador de texto con Javascript</p>
+    </footer>
+
+    <script src="codigo.js"></script>
+
+</body>
+</html>
