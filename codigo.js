@@ -61,12 +61,13 @@ function desencriptar(){
     )
 }
 
+
 function copiando(){
-    
-    let copiar_texto = document.getElementById("textarea-derecho").innerHTML;
-    
+
+    let copiar_texto = document.getElementById("textarea-derecho").value;
+
     navigator.clipboard.writeText(copiar_texto);
     alert("Se ha copiado el texto!!!!!");
-    document.getElementById("textarea-derecho").innerHTML = "";
-    
+    document.getElementById("textarea-derecho").value = "";
+
 }
