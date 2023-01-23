@@ -63,6 +63,7 @@ function desencriptar(){
 function copiando(){
     
     let copiar_texto = document.getElementById("textarea-derecho").innerHTML;
+    document.getElementById("textarea-derecho").innerHTML = "";
 
     if(copiar_texto != ""){
         navigator.clipboard.writeText(copiar_texto);
